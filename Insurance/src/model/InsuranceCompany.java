@@ -22,6 +22,9 @@ InsuranceCompany {
         this.commission = commission;
     }
 
+    public InsuranceCompany() {
+    }
+
     public String getName() {
         return name;
     }
