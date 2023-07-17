@@ -29,7 +29,27 @@ public class InsuranceCompanyService {
         return insuranceCompany;
     }
 
-    public void addInsuranceToInsuranceCompany () {
+    public void addInsuranceToInsuranceCompany (Insurance insurance, InsuranceCompany insuranceCompany) {
+        if(insuranceCompany.getInsuranceList()!= null) {
+            insuranceCompany.getInsuranceList().add(insurance);
+        }else {}
+        ArrayList<Insurance> insuranceList = new ArrayList<>();
+        insuranceList.add(insurance);
+        insuranceCompany.setInsuranceList(insuranceList);
+    }
+    /*
+    private ArrayList<BankAccount> bankAccountList;
+     */
+    public void addBankAccountToInsuranceCompany(InsuranceCompany insuranceCompany, BankAccount bankAccount){
+        if(insuranceCompany.getBankAccountList() !=null){
+            insuranceCompany.getBankAccountList().add(bankAccount);
+        }else {
+            ArrayList<BankAccount> bankAccountList = new ArrayList<>();
+            bankAccountList.add(bankAccount);
+            insuranceCompany.setBankAccountList(bankAccountList);
+        }
+
+
 
     }
 }
