@@ -9,19 +9,8 @@ import java.util.Date;
 
 public class ProposalService {
 
-      /*
-    private InsuranceCompany company;
-    private Vehicle vehicle;
-    private BigDecimal offerPrice;
-    private Date startDate;
-    private Date endDate;
-    private Date expireDate;
-    private boolean isApproved;
-    private BigDecimal discountPrice;
-     */
-
     public Proposal createProposal(InsuranceCompany insuranceCompany, Vehicle vehicle, BigDecimal offerPrice,
-                                   Date startDate, Date endDate, Date expireDate, boolean isApproved, BigDecimal discountPrice){
+                                   Date startDate, Date endDate, Date expireDate, boolean isApproved, BigDecimal discountPrice) {
         Proposal proposal = new Proposal();
         proposal.setCompany(insuranceCompany);
         proposal.setVehicle(vehicle);

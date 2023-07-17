@@ -19,14 +19,17 @@ public class InsuranceCompanyService {
         insuranceCompany.setCommission(commission);
         return insuranceCompany;
     }
-    public void addInsuranceToInsuranceCompany (Insurance insurance, InsuranceCompany insuranceCompany) {
-        if(insuranceCompany.getInsuranceList()!= null) {
+
+    public void addInsuranceToInsuranceCompany(Insurance insurance, InsuranceCompany insuranceCompany) {
+        if (insuranceCompany.getInsuranceList() != null) {
             insuranceCompany.getInsuranceList().add(insurance);
-        }else {}
+        } else {
+        }
         ArrayList<Insurance> insuranceList = new ArrayList<>();
         insuranceList.add(insurance);
         insuranceCompany.setInsuranceList(insuranceList);
     }
+
     public void addBankAccountToInsuranceCompany(InsuranceCompany insuranceCompany, BankAccount bankAccount) {
         if (insuranceCompany.getBankAccountList() != null) {
             insuranceCompany.getBankAccountList().add(bankAccount);
@@ -36,10 +39,11 @@ public class InsuranceCompanyService {
             insuranceCompany.setBankAccountList(bankAccountList);
         }
     }
-    public void addPaymentMovementToInsuranceCompany(InsuranceCompany insuranceCompany ,PaymentMovement paymentMovement){
-        if(insuranceCompany.getPaymentMovementList() !=null){
+
+    public void addPaymentMovementToInsuranceCompany(InsuranceCompany insuranceCompany, PaymentMovement paymentMovement) {
+        if (insuranceCompany.getPaymentMovementList() != null) {
             insuranceCompany.getPaymentMovementList().add(paymentMovement);
-        }else{
+        } else {
             ArrayList<PaymentMovement> paymentMovementList = new ArrayList<>();
             paymentMovementList.add(paymentMovement);
             insuranceCompany.setPaymentMovementList(paymentMovementList);
