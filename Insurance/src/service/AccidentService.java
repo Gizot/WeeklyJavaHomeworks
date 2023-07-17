@@ -22,4 +22,5 @@ public class AccidentService {
         accident.setFailureRate(failureRate);
         return accident;
     }
+
 }

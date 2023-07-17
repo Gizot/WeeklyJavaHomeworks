@@ -1,8 +1,6 @@
 package service;
 
-import model.BankAccount;
-import model.Customer;
-import model.CustomerTypeEnum;
+import model.*;
 
 import java.util.ArrayList;
 
@@ -24,6 +22,31 @@ public class CustomerService {
             customer.setBankAccountList(bankAccountList);
         }
     }
+    /*
+    private ArrayList<PaymentMovement> paymentMovementList;
+    private ArrayList<Vehicle> vehicleList;
+     */
+    public void addInsuranceRequestToCustomer(Customer customer, InsuranceRequest insuranceRequest){
+        if(customer.getInsuranceRequestList() !=null) {
+            customer.getInsuranceRequestList().add(insuranceRequest);
+        } else {
+            ArrayList<InsuranceRequest> insuranceRequestList = new ArrayList<>();
+            insuranceRequestList.add(insuranceRequest);
+            customer.setInsuranceRequestList(insuranceRequestList);
+        }
+    }
+
+    public void addPolicyToCustomer(Customer customer, Policy policy){
+        if(customer.getPolicyList() !=null){
+            customer.getPolicyList().add(policy);
+        } else{
+            ArrayList<Policy> policyList= new ArrayList<>();
+            policyList.add(policy);
+            customer.setPolicyList(policyList);
+        }
+    }
+
+    public void add
 
 
 }
