@@ -12,7 +12,6 @@ public class CustomerService {
 
         return customer;
     }
-
     public void addBankAccountToCustomer(Customer customer, BankAccount bankAccount){
         if(customer.getBankAccountList()!=null) {
             customer.getBankAccountList().add(bankAccount);
@@ -22,10 +21,6 @@ public class CustomerService {
             customer.setBankAccountList(bankAccountList);
         }
     }
-    /*
-    private ArrayList<PaymentMovement> paymentMovementList;
-    private ArrayList<Vehicle> vehicleList;
-     */
     public void addInsuranceRequestToCustomer(Customer customer, InsuranceRequest insuranceRequest){
         if(customer.getInsuranceRequestList() !=null) {
             customer.getInsuranceRequestList().add(insuranceRequest);
@@ -45,8 +40,23 @@ public class CustomerService {
             customer.setPolicyList(policyList);
         }
     }
-
-    public void add
-
+    public void addPaymentMovementToCustomer(Customer customer, PaymentMovement paymentMovement){
+        if(customer.getPaymentMovementList() !=null) {
+            customer.getPaymentMovementList().add(paymentMovement);
+        } else{
+            ArrayList<PaymentMovement> paymentMovementList = new ArrayList<>();
+            paymentMovementList.add(paymentMovement);
+            customer.setPaymentMovementList(paymentMovementList);
+        }
+    }
+    public void addVehicleToCustomer(Customer customer, Vehicle vehicle) {
+        if(customer.getVehicleList() !=null) {
+            customer.getVehicleList().add(vehicle);
+        } else{
+            ArrayList<Vehicle> vehicleList = new ArrayList<>();
+            vehicleList.add(vehicle);
+            customer.setVehicleList(vehicleList);
+        }
+    }
 
 }
